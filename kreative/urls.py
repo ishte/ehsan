@@ -30,8 +30,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-token-auth/', views.obtain_auth_token),
     path('tki/',include('tki.urls')),
-    re_path(r'^media/(?P<path>.*)$',serve,{'document_root':settings.MEDIA_ROOT}),
-    re_path(r'^static/(?P<path>.*)$',serve,{'document_root':settings.STATIC_ROOT}),
+    re_path(r'^media/(?P<path>.*)$',serve,{'tki':settings.MEDIA_ROOT}),
+    re_path(r'^static/(?P<path>.*)$',serve,{'tki':settings.STATIC_ROOT}),
 
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

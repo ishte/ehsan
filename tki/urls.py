@@ -9,5 +9,5 @@ urlpatterns = [
     path('projecttracker/',ProjectTrackerView.as_view() ),
     path('projecdetail/',ProjectDetailView.as_view() ),
     path('team/',TeamNameView.as_view() ),
- 
+    
 ]
